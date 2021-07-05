@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image Resize Example</title>
+<link href="index.css" rel="stylesheet" type="text/css" />
+<script async src="opencv.js"></script>
+<script src="index.js"></script>
+</head>
+<body onload="myfunction()">
+     <div class="container">
+          <h1>Image Resize Example</h1>
+          <label class="custom-file-upload">
+               <input id="file_input" type=file accept="image/*" >Uplaod Image</label>
+          <img id="img" src="" style="display: none;" >
+
+          <canvas id="inputCanvas" 
+          style="border:1px solid black; display:none">
+          </canvas>
+
+          <p>Enter the Height</p>
+          <input type=number id="height" >
+          <p>Enter the Width</p>
+          <input type=number id="width">
+          <br>
+          <button onclick="Resize()" disabled id="Resize">Resize Image</button>
+          <canvas id="canvasOutput" style="display: none;"></canvas>
+          <br>
+          <button id="download" onclick="download()" style="display:none;">Download Resize Image</button>
+     </div>
+</body>
+</html>
